@@ -1,0 +1,34 @@
+body {
+    background-color: #000000; /* Color de fondo general */
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s;
+    background: linear-gradient(135deg, #000000, #ffea00a1); /* Gradient de colores */
+    color: #fff; /* Color del texto principal */
+    box-shadow: 0px 0px 17px 0px rgba(255, 255, 255, 0.644); 
+}
+
+.card-header {
+    background-color: #000000; /* Color de fondo del encabezado */
+    color:#ffea00a1; /* Color del texto del encabezado */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.container h1 {
+    color: #ffea00a1;
+}
+
+.row h2 {
+    color: #ffea00a1;
+}
+
+.btn-primarymio {
+    background-color: rgba(55, 255, 0, 0.818);
+    color: white;
+}
