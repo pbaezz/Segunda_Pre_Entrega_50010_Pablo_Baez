@@ -4,7 +4,7 @@ export default class ProductManager{
 
     getProducts = async () => {
         try {
-            return await productsModel.find().lean();
+            return await productsModel.paginate({}, {limit: 2, page:1, lean:true});
         } catch (err) {
             return err
         }
@@ -12,8 +12,7 @@ export default class ProductManager{
 
     getProductsView = async () => {
         try {
-            //return await productsModel.paginate({}, {limit, page: pageQuery, sort: {first_name: -1}, lean: true})
-            return await productsModel.find().lean();
+            return await productsModel.paginate({}, {limit: 2, page:1, lean:true});
 
         } catch (err) {
             return err
