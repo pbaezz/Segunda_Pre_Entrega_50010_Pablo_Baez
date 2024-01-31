@@ -26,5 +26,17 @@
             </div>
         </div>
         {{/each}}
+        
+            <ul class="pagination">
+                <nav aria-label="Page navigation example">
+                    {{#if hasPrevPage}}
+                        <li class="page-item"><a href="products?pageQuery={{prevPage}}">Anterior</a></li>
+                    {{/if}}
+                        <label>{{page}}</label>
+                    {{#if hasNextPage}}
+                        <li class="page-item"><a href="/products?pageQuery={{nextPage}}">Siguiente</a></li>
+                    {{/if}}
+                </nav>
+            </ul>
     </div>
 </div>
