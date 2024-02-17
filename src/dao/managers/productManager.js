@@ -19,9 +19,9 @@ export default class ProductManager{
         }
     };
 
-    getProductById = async (id) => {
+    getProductById = async ({id:_id}) => {
         try {
-            return await productsModel.findById(id)
+            return await productsModel.findById({id:_id}).lean()
         
         } catch (err) {
             return {error: err.message}

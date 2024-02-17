@@ -8,8 +8,10 @@ const socketProducts = (socketServer) => {
     socketServer.on("connection",async(socket)=>{
         console.log("client connected con ID:",socket.id)
         const listadeproductos=await pm.getProductsView()
+        const product=await pm.getProductById()
 
         socketServer.emit("enviodeproducts",listadeproductos)
+        socketServer.emit("enviodeproductsId",product)
 
         socket.on("addProduct",async(obj)=>{
             await pm.addProduct(obj)

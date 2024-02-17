@@ -6,7 +6,6 @@ socketClient.on("enviodeproducts",(obj)=>{
 
 
 function updateProductList(productList) {
- 
     const productsDiv  = document.getElementById('list-products')
 
     let productosHTML = "";

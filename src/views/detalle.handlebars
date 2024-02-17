@@ -1,9 +1,8 @@
-<div class="container mt-5">
-    <h1 class="text-center mb-5">Nuestros Productos</h1>
-
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-        {{#each listadeproductos}}
-        <div class="col mb-4">
+<div class="container mt-5"></div>
+    <h1 class="text-center mb-5">Detalle de producto</h1>
+    
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3"> 
+        <div class="col mb-4">   
             <div class="card h-100 bg-light">
                 <div class="card-header">
                     <i class="bi bi-tag"></i> Code: {{this.code}}
@@ -20,25 +19,12 @@
                             <i class="bi bi-image"></i> Image: <img src="{{this.thumbnail}}" alt="{{this.title}}"
                                 class="img-fluid mt-2">
                         </li>
+                        <a href="">
+                            <button>Agregar al Carrito</button>
+                        </a>
                     </ul>
-                    <a href="http://localhost:8080/product/65ada11cea4c1fc8af22cb77">
-                        <button >Ver Detalle</button>
-                    </a>
                 </div>
-            </div>
-        </div>
-        {{/each}}
-        
-            <ul class="pagination">
-                <nav aria-label="Page navigation example">
-                    {{#if hasPrevPage}}
-                        <li class="page-item"><a href="products?pageQuery={{prevPage}}">Anterior</a></li>
-                    {{/if}}
-                        <label>{{page}}</label>
-                    {{#if hasNextPage}}
-                        <li class="page-item"><a href="/products?pageQuery={{nextPage}}">Siguiente</a></li>
-                    {{/if}}
-                </nav>
-            </ul>
-    </div>
-</div>
+            </div>    
+        </div>          
+    </div>  
+</div>          
